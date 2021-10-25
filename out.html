@@ -32,6 +32,25 @@
             document.getElementById("timeShow").innerHTML =  "时间："+y+"/"+mm+"/"+d+""+" "+h+":"+m+":"+s+"";
 //             t = setTimeout(time,1000); //设定定时器，循环执行
         }
+        
+        var t1=null;
+        var t2=null;
+        var t3=null;
+        t1 = setTimeout(test1,100);
+        t2 = setTimeout(test2,100);
+        t3 = setTimeout(test3,100);
+        function test1() {
+            var storage = window.localStorage;
+            document.getElementById("xh").innerHTML=storage.getItem('name');
+        }
+        function test2() {
+            var storage = window.localStorage;
+            document.getElementById("xm").innerHTML=storage.getItem('number');
+        }
+        function test3() {
+            var storage = window.localStorage;
+            document.getElementById("xy").innerHTML=storage.getItem('collage');
+        }
     </script>
 </head>
 <body ontouchstart>
@@ -42,23 +61,23 @@
     <div class="weui-cells">
         <div class="weui-cell  weui-cell_example">
             <div class="weui-cell__hd"><img src="images/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-            <div class="weui-cell__bd">
+            <div class="weui-cell__bd" id="xh">
                 <label>学号：</label>
-                <input type=text style="border: none;font-size: 17px;width: 100px" value="4011212151">
+<!--                 <input type=text style="border: none;font-size: 17px;width: 100px" value="4011212151"> -->
             </div>
         </div>
         <div class="weui-cell  weui-cell_example">
             <div class="weui-cell__hd"><img src="images/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-            <div class="weui-cell__bd">
+            <div class="weui-cell__bd" id="xm">
                 <label>姓名：</label>
-                <input type=text style="border: none;font-size: 17px;width: 60px" value="李世民">
+<!--                 <input type=text style="border: none;font-size: 17px;width: 60px" value="李世民"> -->
             </div>
         </div>
         <div class="weui-cell  weui-cell_example">
             <div class="weui-cell__hd"><img src="images/person.png" alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
-            <div class="weui-cell__bd">
+            <div class="weui-cell__bd" id="xy">
                 <label>学院：</label>
-                <input type=text style="border: none;font-size: 17px;width: 70px" value="物理学院">
+<!--                 <input type=text style="border: none;font-size: 17px;width: 70px" value="物理学院"> -->
             </div>
         </div>
         <div class="weui-cell  weui-cell_example">
