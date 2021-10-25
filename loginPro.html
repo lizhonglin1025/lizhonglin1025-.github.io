@@ -1,0 +1,34 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width">-->
+    <script>
+        var flag = false;
+        var number = ['17865569673','13889708426','13840171293','15750487874']
+        function submit1() {
+            var str1 = document.getElementById("phonenumber").value.trim();
+            // setInfo(str1);
+            for( var i=0; i<number.length;i++){
+                if(str1 == number[i]){
+                    flag=true;
+                    document.myform.action='login.html';
+                    break;
+                }
+            }
+            if(!flag){
+                alert("您无权限访问该网站。");
+            }
+        }
+    </script>
+</head>
+<body>
+<div style="position:absolute;left:640px;top:180px;font-size: 40px" >
+    <form name="myform" >
+        <label>输入手机号 </label><input type="text" name="number" id="phonenumber" style="height: 40px;width: 200px"/>
+        <br/><br/>
+        <input type="submit" name="button" value="登录" onclick="submit1()" style="width: 60px;height: 40px;font-size: 20px"/>
+    </form>
+</div>
+</body>
+</html>
