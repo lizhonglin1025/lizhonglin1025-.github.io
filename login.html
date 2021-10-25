@@ -35,15 +35,17 @@
     </script>
 </head>
 <body>
-<form name="myform">
-    <label>学号</label><input type="text" name="number" id="xh" />
+<div style="position:absolute;left:640px;top:180px;font-size: 40px" >
+<form name="myform" >
+    <label>学号</label><input type="text" name="number" id="xh" style="height: 40px;width: 200px"/>
+    <br/><br/>
+    <label>姓名</label><input type="text" name="name" id="xm" style="height: 40px;width: 200px"/>
+    <br/><br/>
+    <label>学院</label><input type="text" name="collage" id="xy" style="height: 40px;width: 200px"/>
     <br/>
-    <label>姓名</label><input type="text" name="name" id="xm" />
-    <br/>
-    <label>学院</label><input type="text" name="collage" id="xy" />
-    <br/>
-    <input type="submit" name="button" value="出校" onclick="submit1()" />
-    <input type="submit" name="button" value="进校" onclick="submit2()" />
+    <input type="submit" name="button" value="出校" onclick="submit1()" style="width: 60px;height: 40px;font-size: 20px"/>
+    <input type="submit" name="button" value="进校" onclick="submit2()" style="width: 60px;height: 40px;font-size: 20px"/>
 </form>
+</div>
 </body>
 </html>
